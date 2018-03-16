@@ -44,4 +44,3 @@ print("Eski Liste: " , newArray)
 step = insertionSort(newArray)
 print("Yeni Liste: " , newArray)
 print("Adım Sayısı: " , step)
-
