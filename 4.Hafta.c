@@ -168,3 +168,4 @@ void bekle() {
     temp = getchar();
     ekranTemizle();
 }
+
