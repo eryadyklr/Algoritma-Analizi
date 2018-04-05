@@ -3,6 +3,8 @@
 #include <time.h>
 #include <conio.h>
 
+static int sum = 0;
+
 struct Node{
   int data;
   struct Node *left,*right;
@@ -76,6 +78,21 @@ int summaryDepth(struct Node * root){
     return summary;
 }
 
+void summaryDepth2(struct Node *root, int depthValue){
+    if(root==NULL) return;
+    if(root->right != NULL || root->left != NULL){
+    	depthValue++;
+    	if(root->left != NULL){
+    		sum += depthValue;
+    		summaryDepth2(root->left,depthValue);
+		}
+		if(root->right != NULL){
+    		sum += depthValue;
+    		summaryDepth2(root->right,depthValue);
+		}
+	}
+}
+
 int search(struct Node *root, int val){
     while (root != NULL) {
         if (val == root->data) {
@@ -94,7 +111,7 @@ int main(){
 
   struct Node *root=NULL;
 
-  int rastgele;
+  int randomNumber;
   srand(time(NULL));
 
   int i, number;
@@ -102,8 +119,8 @@ int main(){
   scanf("%d", &number);
 
   for(i=0; i<number; i++){
-    rastgele=1+rand()%100;
-    root = addNode(root,rastgele);
+    randomNumber=1+rand()%100;
+    root = addNode(root,randomNumber);
   }
 
   printf("\n\t");
@@ -112,7 +129,9 @@ int main(){
   printf("\n\tMaximum \t: %d",maximum(root));
   printf("\n\tNode Number \t: %d",nodeNumber(root));
   printf("\n\tDepth \t\t: %d",depth(root)-1);
-  printf("\n\tSum Depth \t: %d\n",summaryDepth(root));
+  printf("\n\tSum Depth-Line \t: %d",summaryDepth(root));
+  summaryDepth2(root,0);
+  printf("\n\tSum Depth-All \t: %d\n",sum);
   getch();
   //printf("\nSearch (25) = %d",search(root,25));
   return 0;
