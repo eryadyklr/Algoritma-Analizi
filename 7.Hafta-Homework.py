@@ -39,11 +39,8 @@ def dis_carpim(a,b):
 def ic_carpim(a,b):
     result=[]
     toplam=0
-  # iterate through rows of X
     for i in range(len(a)):
-    # iterate through columns of Y
         for j in range(len(b[0])):
-        # iterate through rows of Y
             for k in range(len(b)):
                 toplam += a[i][k] * b[k][j]
             result.append(toplam)
