@@ -55,3 +55,25 @@ dis_carpim(a,b)
 
 kartezyen_carpim(a,b)
 #[[1, 5], [1, 2], [0, 1], [0, 3], [0, 5], [0, 2], [1, 1], [1, 3]]
+
+def determinant(matrix, mul):
+    width = len(matrix)
+    if width == 1:
+        return mul * matrix[0][0]
+    else:
+        sign = -1
+        total = 0
+        for i in range(width):
+            m = []
+            for j in range(1, width):
+                buff = []
+                for k in range(width):
+                    if k != i:
+                        buff.append(matrix[j][k])
+                m.append(buff)
+            sign *= -1
+            total += mul * solve(m, sign * matrix[0][i])
+        return total
+
+print(determinant(b, 1))
+#13
