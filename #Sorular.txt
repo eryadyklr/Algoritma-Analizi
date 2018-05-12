@@ -1,0 +1,15 @@
+27 nisan (2 grup, numara % 2)
+  1.a probability
+  1.b determinant
+
+4 mayıs (5 grup, numara % 5)
+  1.a determinant cofactor
+  1.b matrisin sıfır uzayı (none-space)
+  1.c LU Ayrıştırma
+  1.d bir matrisin özdeğer ve özvektörlerin bulunması
+  1.e verilen n tane (x,y) noktaların için y=ax+b doğrusunun a ve b katsayılarının bulunması
+
+11 mayıs (3 grup, numara % 3)
+  1.a n elemanlı bir kümenin bütün alt kümelerini üreten fonksiyonu yazınız
+  1.b en popüler/önemli beş sürekli olasılık dağılımını çizdiren fonksiyonu yazınız
+  1.c en popüler/önemli beş kesikli olasılık dağılımını çizdiren fonksiyonu yazınız
