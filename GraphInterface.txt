@@ -1,0 +1,37 @@
+public interface Node {
+	  public Node createNode(String name, int ID, float weight);
+	  public Node[] getNeighbours();
+	  public Edge[] getEdges();
+	  public void addEdge(Edge e);
+	  public void removeEdge(Edge e);
+	  public String getName();
+	  public int getID();
+	  public float getWeight();	
+	  public String toString();
+
+public interface Edge {
+	  public Edge createEdge(String name, int ID, float weight);
+	  public Node getStartNode();
+	  public void setStartNode(Node n);
+	  public Node getEndNode();
+	  public void setEndNode(Node n);
+	  public String getName();
+	  public int getID();
+	  public float getWeight();
+	  public String toString();
+
+public interface Graph { 
+	  public Graph createGraph(String name, int ID, Node[] nodes, Edge[] edges, Node root);
+	  public String getName();
+	  public Edge[] getEdges();
+	  public void addEdge(Edge e);
+	  public Edge getEdge(String name, int ID);
+	  public void removeEdge(Edge e);
+	  public Node[] getNodes();
+	  public void addNode(Node n);
+	  public Node getNode(String name, int ID);
+	  public void removeNode(Node n);
+	  public void setRoot(Node n);
+	  public Node getRoot();  
+	  public boolean isTree();        <= optional!
+	  public String toString();
