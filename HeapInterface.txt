@@ -1,5 +1,5 @@
 public interface MaxHeapinterface
-	  public void add(Comparable newEntry);
+    public void add(Comparable newEntry);
     public Comparable removeMax();
     public Comparable getMax();
     public boolean isEmpty();
