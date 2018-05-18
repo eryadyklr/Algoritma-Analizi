@@ -13,3 +13,9 @@
   1.a n elemanlı bir kümenin bütün alt kümelerini üreten fonksiyonu yazınız
   1.b en popüler/önemli beş sürekli olasılık dağılımını çizdiren fonksiyonu yazınız
   1.c en popüler/önemli beş kesikli olasılık dağılımını çizdiren fonksiyonu yazınız
+
+18 mayıs (herkes)
+	1.a Heap Interface
+	1.b Hash Interface
+	1.c Graph Interface (Prim Kruskal)
+	2. QR decomposition of a matris
