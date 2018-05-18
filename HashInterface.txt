@@ -1,0 +1,7 @@
+typedef struct hash *hash;
+
+hash newHash ();
+hash newHash2 (double lf);
+void insert (hash h, poly key, poly value);
+poly lookup (hash h, poly key);
+void delete (hash h, poly key);
